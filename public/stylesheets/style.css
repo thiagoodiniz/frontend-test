@@ -87,7 +87,7 @@ h3{
   width:180px;
   height:60px;
   position: fixed;
-  display: block;
+  display: none;
 }
 .arrow:before {
   content:""; 
