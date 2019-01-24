@@ -55,3 +55,28 @@ body {
 .list-item:hover .img{
   border:3px solid white;
 }
+
+.text > h3 {
+  color: #B22222;
+}
+
+.text > p {
+  color: #808080;
+}
+
+.img{
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  align-self: flex-start;
+  border:3px solid #B22222;
+}
+
+.text {
+  padding-left: 2em;
+  text-align: left;
+}
+
+h3{
+  margin-bottom: -10px;
+}
