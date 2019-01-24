@@ -1,5 +1,16 @@
 body {
   text-align: center;
   font-size: 12px;
-  font-family: "Arial, sans-serif";
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+}
+
+.logo {
+  background: url(../head-fazenda.png) 0 0 no-repeat;
+  width: 412px;
+  height: 195px;
+  display: flex;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin: -7px;
 }
