@@ -11,10 +11,11 @@ function getJson(){
 function render(data){
     return `
         ${
-            data.map(item => 
+            data.map((item, index) => 
                 `
                 <li class="list-item" onmouseover="hoverItemList(this, ${item.positive}, ${item.negative})" onmouseout="removeArrow()" id="${item.__id}">
                     <img class="img" src="${item.picture}" alt="...">
+                    <span class='position'>${index+1}</span>
                     <div class="text"> 
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
