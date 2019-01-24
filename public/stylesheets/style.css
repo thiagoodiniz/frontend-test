@@ -40,7 +40,7 @@ body {
   flex: 1 2 1;
 }
 
-.list-item:nth-child(2n+2) {background: #F5F5DC}
+.list-item:nth-child(2n+2) {background: #f1f1f1}
 
 .list-item:hover{
   background-color: #B22222;
