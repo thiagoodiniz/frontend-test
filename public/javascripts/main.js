@@ -31,12 +31,11 @@ function hoverItemList(element, positive, negative){
     let percents = calculatePercentage(positive, negative);
     let elementPosition = getElementPosition(element.id);
     let arrow = document.getElementById('arrow');
-    if(positive){
-        arrow.innerHTML = renderArrowPercents(percents);
-        arrow.style.top = `${elementPosition.top + 10}px`;
-        arrow.style.left = `${elementPosition.left + 365}px`;
-        arrow.style.display = 'block';
-    }
+    console.log(percents);
+    arrow.innerHTML = renderArrowPercents(percents);
+    arrow.style.top = `${elementPosition.top + 10}px`;
+    arrow.style.left = `${elementPosition.left + 365}px`;
+    arrow.style.display = 'block';
 }
 
 function removeArrow(){
@@ -57,8 +56,8 @@ function getElementPosition(elemID){
 
 function calculatePercentage(positive, negative){
     let total = positive + negative;
-    positive = Math.round((positive / total) * 100);
-    negative = Math.round((negative / total) * 100);
+    positive = positive ? Math.round((positive / total) * 100) : 0;
+    negative = negative ? Math.round((negative / total) * 100) : 0;
     return {positive, negative} 
 }
 
