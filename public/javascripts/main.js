@@ -28,13 +28,30 @@ function render(json){
 
 function hoverItemList(element, positive, negative){
     let percents = calculatePercentage(positive, negative);
+    let elementPosition = getElementPosition(element.id);
     let arrow = document.getElementById('arrow');
-    arrow.innerHTML = renderArrowPercents(percents);
-    arrow.style.display = 'block';
+    if(positive){
+        arrow.innerHTML = renderArrowPercents(percents);
+        arrow.style.top = `${elementPosition.top + 10}px`;
+        arrow.style.left = `${elementPosition.left + 365}px`;
+        arrow.style.display = 'block';
+    }
 }
 
 function removeArrow(){
     document.getElementById('arrow').style.display = 'none';
+}
+
+function getElementPosition(elemID){
+    var offsetTrail = document.getElementById(elemID);
+    var offsetLeft = 0;
+    var offsetTop = 0;
+    while (offsetTrail) {
+        offsetLeft += offsetTrail.offsetLeft;
+        offsetTop += offsetTrail.offsetTop;
+        offsetTrail = offsetTrail.offsetParent;
+    }
+    return {left:offsetLeft, top:offsetTop};
 }
 
 function calculatePercentage(positive, negative){
