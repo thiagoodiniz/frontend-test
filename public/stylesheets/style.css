@@ -80,3 +80,23 @@ body {
 h3{
   margin-bottom: -10px;
 }
+
+.arrow {
+  background:white;
+  border-radius: 5px;
+  width:180px;
+  height:60px;
+  position: fixed;
+  display: block;
+}
+.arrow:before {
+  content:""; 
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: 22px;
+  left: -14px;
+  border-width: 7px;
+  border-color: transparent white transparent transparent;
+  border-style: solid;
+}

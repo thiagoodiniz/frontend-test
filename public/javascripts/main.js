@@ -13,7 +13,7 @@ function render(json){
         ${
             json.data.map(item => 
                 `
-                <li class="list-item" id="${item.__id}">
+                <li class="list-item" onmouseover="renderArrowPercents()" id="${item.__id}">
                     <img class="img" src="${item.picture}" alt="...">
                     <div class="text"> 
                         <h3>${item.name}</h3>
@@ -24,6 +24,21 @@ function render(json){
             ).join('')
         }
         `
+}
+
+function renderArrowPercents(){
+    return  `
+            <div class="into-arrow">
+                <p class="p1">Gostam</p>
+                <p class="p2">Não Gostam</p>
+                <div class="percent-one">
+                    <p>40%</p>
+                </div>
+                <div class="percent-two">
+                    <p>60%</p>
+                </div>
+            </div>
+           `
 }
 
 const json = getJson()
