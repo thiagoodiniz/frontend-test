@@ -100,3 +100,52 @@ h3{
   border-color: transparent white transparent transparent;
   border-style: solid;
 }
+
+.into-arrow {
+  display: grid;
+  grid-template-areas: 
+  'p1 p1 p2 p2'
+  'p3 p3 p4 p4';
+}
+
+.p1 {
+  background-color: #B22222;
+  grid-area: p1;
+  margin-top: 0px;
+  border-top-left-radius: 5px;
+  border-right: 1px solid black;
+  color: white;
+  height: 18px;
+  padding-top: 3px;
+}
+
+.p2 {
+  background-color: #B22222;
+  grid-area: p2;
+  margin-top: 0px;
+  border-top-right-radius: 5px;
+  color: white;
+  height: 18px;
+  padding-top: 3px;
+}
+
+.percent-one {
+  grid-area: p3;
+  border-right: 1px solid black;
+  margin-top: -18px;
+  height: 100px;
+}
+
+.percent-two {
+  grid-area: p4;
+  margin-top: 0px;
+  margin-top: -18px;
+  height: 100px;
+}
+
+.percent-one, .percent-two p {
+  font-size: 30px;
+  line-height: 0px;
+  color: #808080;
+  font-weight: bold;
+}
