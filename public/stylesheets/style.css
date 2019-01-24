@@ -39,3 +39,19 @@ body {
   padding: 15px;
   flex: 1 2 1;
 }
+
+.list-item:hover{
+  background-color: #B22222;
+}
+
+.list-item:hover .text > h3 {
+    color: white;
+}
+
+.list-item:hover .text > p {
+  color: black;
+}
+
+.list-item:hover .img{
+  border:3px solid white;
+}
