@@ -31,7 +31,6 @@ function hoverItemList(element, positive, negative){
     let percents = calculatePercentage(positive, negative);
     let elementPosition = getElementPosition(element.id);
     let arrow = document.getElementById('arrow');
-    console.log(percents);
     arrow.innerHTML = renderArrowPercents(percents);
     arrow.style.top = `${elementPosition.top + 10}px`;
     arrow.style.left = `${elementPosition.left + 365}px`;
