@@ -8,10 +8,10 @@ function getJson(){
     }   
 }
 
-function render(json){
+function render(data){
     return `
         ${
-            json.data.map(item => 
+            data.map(item => 
                 `
                 <li class="list-item" onmouseover="hoverItemList(this, ${item.positive}, ${item.negative})" onmouseout="removeArrow()" id="${item.__id}">
                     <img class="img" src="${item.picture}" alt="...">
@@ -85,5 +85,4 @@ const json = getJson()
 let data = setDataPercentage(json.data);
 data.sort((a,b) => b.percentage.positive - a.percentage.positive)
 const list = document.getElementById('list')
-list.innerHTML = render(json)
-
+list.innerHTML = render(data)
