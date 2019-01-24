@@ -8,4 +8,25 @@ function getJson(){
     }   
 }
 
+function render(json){
+    return `
+        ${
+            json.data.map(item => 
+                `
+                <li class="list-item" id="${item.__id}">
+                    <img class="img" src="${item.picture}" alt="...">
+                    <div class="text"> 
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                </li>
+                `
+            ).join('')
+        }
+        `
+}
+
 const json = getJson()
+const list = document.getElementById('list')
+list.innerHTML = render(json)
+

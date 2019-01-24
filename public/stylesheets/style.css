@@ -14,3 +14,28 @@ body {
   overflow: hidden;
   margin: -7px;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my-list {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 350px;
+  border-radius: 2px;
+  padding: 0;
+  list-style-type: none;
+  margin-left: 27px;
+}
+
+.list-item {
+  display: flex;
+  padding: 15px;
+  flex: 1 2 1;
+}
