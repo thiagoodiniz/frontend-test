@@ -76,7 +76,14 @@ function renderArrowPercents(percents){
            `
 }
 
+function setDataPercentage(data){
+    data.map(item => item.percentage = calculatePercentage(item.positive, item.negative))
+    return data;
+}
+
 const json = getJson()
+let data = setDataPercentage(json.data);
+data.sort((a,b) => b.percentage.positive - a.percentage.positive)
 const list = document.getElementById('list')
 list.innerHTML = render(json)
 
